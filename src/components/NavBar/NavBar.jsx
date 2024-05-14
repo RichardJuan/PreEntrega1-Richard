@@ -1,5 +1,6 @@
 import "./navbar.css"
 import CartWidget from "../CartWidget/cartWidget";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     return (
@@ -9,10 +10,9 @@ const Navbar = () => {
                 <CartWidget />
             </div>
             <div>               
-                <li><a href="#">TEAMS</a></li>
-                <li><a href="#">STAR PLAYERS</a></li>
-                <li><a href="#">HALL OF FAME</a></li>         
-                <li><a href="#">RED LINE</a></li>
+                <Link className="categoria" to="/category/teams">TEAMS</Link>
+                <Link className="categoria" to="/category/starPlayers">STAR PLAYERS</Link>
+                <Link className="categoria" to ="/category/hallOfFame">HALL OF FAME</Link>         
             </div>
         </header>
     );

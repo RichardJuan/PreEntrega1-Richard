@@ -5,7 +5,7 @@ const productos = [
         descripcion: "sdfsdf",
         precio: 60000,
         stock: 2,
-        categoria: "automaticas",
+        category: "starPlayers",
         imagen: '/multimedia/1_-TEAMS/All Stars/ALL-STAR-shop-v2-600x600.jpg'
     },
     {
@@ -14,7 +14,7 @@ const productos = [
         descripcion: "sdgfsdg",
         precio: 56000,
         stock: 1,
-        categoria: "automaticas",
+        category: "teams",
         imagen: '/multimedia/1_-TEAMS/Psycho Mix/PSYCO-shop-v2-600x600.jpg'
     }
 ]

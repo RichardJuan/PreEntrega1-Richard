@@ -2,15 +2,22 @@ import { useEffect, useState } from 'react';
 import obtenerProductos from '../../data/data';
 import ItemList from './ItemList';
 import './itemListContainer.css';
+import { useParams } from 'react-router-dom';
 
 const itemListContainer = (props) => {
     const [ products, setProducts] = useState([])
     const {saludo} = props
+    const { idCategory} = useParams()
 
 useEffect( () => {
     obtenerProductos()
         .then((respuesta) => {
-            setProducts(respuesta);
+            if(idCategory){
+                const productsFilter = respuesta.filter((productRes) => productRes.category === idCategory)
+                setProducts(productsFilter);
+            }else{
+                setProducts(respuesta);
+            }
         })
         .catch((error) => {
             console.log(error);
@@ -18,8 +25,7 @@ useEffect( () => {
         .finally(() => {
             console.log("final de promesa")
         });
-    }, [] );
-    console.log(products)
+    }, [idCategory] );
     
     return(
         <div>

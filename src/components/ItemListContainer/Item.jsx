@@ -1,6 +1,6 @@
 const Item = ({product}) => {
     return (
-        <div key={product.id}>
+        <div className="card">
                     <img src={product.imagen} style={{ width: "20%", height: "auto"}} />
                     <p>{product.nombre}</p>
                     <p>Precio</p>

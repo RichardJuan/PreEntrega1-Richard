@@ -9,7 +9,7 @@ header{
 .logo {
     height: 2em;
 }
-li{
+.categoria{
     padding-top: 2%;
     font-size: 10px;
     list-style: none;
