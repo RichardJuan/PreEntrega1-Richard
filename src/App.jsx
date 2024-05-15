@@ -14,6 +14,7 @@ function App() {
         <Route path="/" element={ <ItemListContainer saludo="Bienvenidos a Komodo Farm GrowShop.
         Distribuidores oficiales de BSF"/>} />
         <Route path='/category/:idCategory' element={ <ItemListContainer saludo="Distribuidores oficiales de BSF" />}/>
+        <Route path='/detail/:idProduct' element={<ItemDetailContainer />} />
       </Routes>
     </BrowserRouter>
     

@@ -6,7 +6,9 @@ const Navbar = () => {
     return (
         <header>
             <div className="superiorHead">
+                <Link to="/">
                 <h1>Grow <img src="./multimedia/komodo.png" className="logo" /> Shop</h1>
+                </Link>
                 <CartWidget />
             </div>
             <div>               

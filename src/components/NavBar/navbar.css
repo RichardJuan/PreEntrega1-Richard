@@ -21,7 +21,7 @@ a {
     text-decoration: none;
     color: black;
 }
-a:hover{
+.categoria:hover{
     color: rgb(0, 87, 26);
     font-size: 12px;
     text-shadow: 3px 3px 3px rgb(0, 255, 170);

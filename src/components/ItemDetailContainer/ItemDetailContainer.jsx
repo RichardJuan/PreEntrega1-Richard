@@ -1,15 +1,17 @@
 import { useState, useEffect } from "react";
 import obtenerProductos from "../../data/data";
 import ItemDetail from "./ItemDetail";
+import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {
     const [ product, setProduct ] = useState ({})
+    const { idProduct } = useParams()
 
     useEffect(() => {
         obtenerProductos()
         .then((respuesta) => {
-            const productFind = respuesta.find((productRes) => productRes.id === 467)
-            setProduct(productFind)
+            const productFind = respuesta.find((productRes) => productRes.id === Number(idProduct));
+            setProduct(productFind);
         })
         .catch((error) => {
             console.error(error);
