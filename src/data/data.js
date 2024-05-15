@@ -5,7 +5,7 @@ const productos = [
         descripcion: "sdfsdf",
         precio: 60000,
         stock: 2,
-        category: "starPlayers",
+        category: "teams",
         imagen: '/multimedia/1_-TEAMS/All Stars/ALL-STAR-shop-v2-600x600.jpg'
     },
     {
@@ -42,7 +42,7 @@ const productos = [
         precio: 37000,
         stock: 1,
         category: "starPlayers",
-        imagen: '/multimedia/2_-STAR PLAYERS/BLUEBERRY FEM/PWEB_BB_FEM -01.png'
+        imagen: '/multimedia/2_- STAR PLAYERS/BLUEBERRY-FEM/principal.png'
     },
     {
         id: 592,
@@ -51,7 +51,7 @@ const productos = [
         precio: 34000,
         stock: 1,
         category: "starPlayers",
-        imagen: '/multimedia/2_-STAR PLAYERS/BLUEBERRY XXL AUTO/PWEB_BB_AUTO -01.png'
+        imagen: '/multimedia/2_- STAR PLAYERS/BLUEBERRY-XXL-AUTO/principal.png'
     },
     {
         id: 593,
@@ -60,7 +60,7 @@ const productos = [
         precio: 34000,
         stock: 1,
         category: "starPlayers",
-        imagen: '/multimedia/2_-STAR PLAYERS/CRITICAL + 2 AUTO/auto-1 (1).png'
+        imagen: '/multimedia/2_- STAR PLAYERS/CRITICAL+2-AUTO/principal.png'
     },
     {
         id: 594,
@@ -69,7 +69,7 @@ const productos = [
         precio: 39000,
         stock: 1,
         category: "starPlayers",
-        imagen: '/multimedia/2_-STAR PLAYERS/CRITICAL +2 FEM/fem-1 (1).png'
+        imagen: '/multimedia/2_- STAR PLAYERS/CRITICAL +2 FEM/principal.png'
     },
     {
         id: 595,
@@ -78,7 +78,7 @@ const productos = [
         precio: 40000,
         stock: 1,
         category: "starPlayers",
-        imagen: '/multimedia/2_-STAR PLAYERS/DOUBLE COOKIES AUTO/DOUBLE COOKIES AUTO. PLANTA + LOGO.jpg'
+        imagen: '/multimedia/2_- STAR PLAYERS/DOUBLE-COOKIES-AUTO/principal.jpg'
     },
     {
         id: 596,
@@ -87,7 +87,7 @@ const productos = [
         precio: 40000,
         stock: 1,
         category: "starPlayers",
-        imagen: '/multimedia/2_-STAR PLAYERS/DOUBLE COOKIES FEM/DOUBLE COOKIES FEM 1000X1000.png'
+        imagen: '/multimedia/2_- STAR PLAYERS/DOUBLE-COOKIES-FEM/principal.png'
     },
     {
         id: 597,
@@ -96,7 +96,7 @@ const productos = [
         precio: 42000,
         stock: 1,
         category: "starPlayers",
-        imagen: '/multimedia/2_-STAR PLAYERS/EL GAUCHO/PLANTA-50.jpg'
+        imagen: '/multimedia/2_- STAR PLAYERS/EL-GAUCHO/principal.jpg'
     },
     {
         id: 598,
@@ -105,7 +105,7 @@ const productos = [
         precio: 40000,
         stock: 1,
         category: "starPlayers",
-        imagen: '/multimedia/2_-STAR PLAYERS/GORILLA GLUE AUTO/IMAGEN_ gorilla Auto PLANTA+ LOGO.jpg'
+        imagen: '/multimedia/2_- STAR PLAYERS/GORILLA-GLUE-AUTO/principal.jpg'
     },
     {
         id: 599,
@@ -114,7 +114,7 @@ const productos = [
         precio: 45000,
         stock: 1,
         category: "",
-        imagen: '/multimedia/2_-STAR PLAYERS/GORILLA GLUE FASTER/PLANTA-50.jpg'
+        imagen: '/multimedia/2_- STAR PLAYERS/GORILLA-GLUE-FASTER/principal.jpg'
     },
     {
         id: 5991,
@@ -123,7 +123,7 @@ const productos = [
         precio: 45000,
         stock: 1,
         category: "",
-        imagen: '/multimedia/2_-STAR PLAYERS/GORILLA GLUE FEM/Copia de gorilla-glue-4.jpg'
+        imagen: '/multimedia/2_- STAR PLAYERS/GORILLA-GLUE-FEM/principal.jpg'
     },
     {
         id: 607,
@@ -132,7 +132,7 @@ const productos = [
         precio: 50000,
         stock: 1,
         category: "hallOfFame",
-        imagen: '/multimedia/4_-HALL OF FAME/GREEN TIGER/BSF_Green-tiger_1.jpg'
+        imagen: '/multimedia/4_- HALL OF FAME/GREEN TIGER/principal.jpg'
     },
     {
         id: 608,
@@ -140,8 +140,8 @@ const productos = [
         descripcion: "sdgfsdg",
         precio: 50000,
         stock: 1,
-        category: "",
-        imagen: '/multimedia/4_-HALL OF FAME/OBG KUSH/BSF_Obg-kush_1.jpg'
+        category: "hallOfFame",
+        imagen: '/multimedia/4_- HALL OF FAME/OBG KUSH/principal.jpg'
     }
 ]
 
