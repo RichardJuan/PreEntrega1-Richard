@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-const ItemCount = ({ stock }) => {
+const ItemCount = ({ stock, addProduct }) => {
     const [ count, setCount] = useState(1)
 
     const restar = () => {
@@ -25,3 +25,5 @@ const ItemCount = ({ stock }) => {
         </div>
     )
 }
+
+export default ItemCount
