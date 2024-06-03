@@ -14,7 +14,7 @@ const ItemCount = ({ stock, addProduct }) => {
         }
     }
     const añadirAlCarrito = () => {
-        console.log( count )
+        addProduct( count )
     }
     return (
         <div>
