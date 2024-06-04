@@ -1,9 +1,20 @@
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import { Button } from "bootstrap";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
     const {carrito, vaciarCarrito, borrarProductoPorId, precioTotal} = useContext(CartContext)
+
+    if(carrito.lenght === 0){
+        return(
+            <div>
+                <h1>El carrito está vacio</h1>
+                <Link to="/">Ver productos</Link>
+            </div>
+        )
+    }
+
     return(
         <div>
             {

@@ -6,10 +6,12 @@ import { useParams } from 'react-router-dom';
 
 const itemListContainer = (props) => {
     const [ products, setProducts] = useState([])
+    const [loading, setLoading] = useState(false)
     const {saludo} = props
     const { idCategory} = useParams()
 
 useEffect( () => {
+    setLoading(true)
     obtenerProductos()
         .then((respuesta) => {
             if(idCategory){
@@ -23,14 +25,16 @@ useEffect( () => {
             console.log(error);
         })
         .finally(() => {
-            console.log("final de promesa")
+            setLoading(false)
         });
     }, [idCategory] );
     
     return(
         <div>
             <h3>{saludo}</h3>
-            <ItemList products = {products} />
+            {
+                loading ? <div> Cargando...</div> : <ItemList products = {products} />
+            }
         </div>
     )
 }
