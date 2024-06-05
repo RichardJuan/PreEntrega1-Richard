@@ -1,24 +1,24 @@
 import { useState, useEffect } from "react";
-import obtenerProductos from "../../data/data";
 import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
+import { doc, getDoc } from "firebase/firestore";
+import db from "../../db/db.js";
 
 const ItemDetailContainer = () => {
     const [ product, setProduct ] = useState ({})
     const { idProduct } = useParams()
 
-    useEffect(() => {
-        obtenerProductos()
-        .then((respuesta) => {
-            const productFind = respuesta.find((productRes) => productRes.id === Number(idProduct));
-            setProduct(productFind);
-        })
-        .catch((error) => {
-            console.error(error);
-        })
-        .finally(() => {
-            console.log("Final de promesa2");
+const getProduct = () => {
+    const productRef = doc(db, "productos", idProduct)
+    getDoc(productRef)
+        .then((productDb) => {
+            const data = {id: productDb.id, ...productDb.data()}
+            setProduct(data)
         });
+}
+
+    useEffect(() => {
+        getProduct()
     }, []);
 
     return(
