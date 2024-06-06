@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Cart = () => {
     const {carrito, vaciarCarrito, borrarProductoPorId, precioTotal} = useContext(CartContext)
 
-    if(carrito.lenght === 0){
+    if( carrito.lenght === 0){
         return(
             <div>
                 <h1>El carrito está vacio</h1>
@@ -31,6 +31,7 @@ const Cart = () => {
             }
             <button onClick={vaciarCarrito}>Vaciar carrito</button>
             <h2>$ { precioTotal() }</h2>
+            <Link to="/Checkout"> Continuar con mi compra</Link>
         </div>
     );
 }
