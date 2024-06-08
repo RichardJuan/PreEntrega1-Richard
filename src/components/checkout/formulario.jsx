@@ -7,7 +7,7 @@ const Formulario = ({datosForm, handleSubmitForm, handleChangeInput}) => {
                 <input type="text" name="celular" value={datosForm.celular} onChange={handleChangeInput}/>
                 <label>Email:</label>
                 <input type="email" name="email" value={datosForm.email} onChange={handleChangeInput}/>
-                <button type="submit"></button>
+                <button type="submit">Enviar</button>
             </form>
     )
 }

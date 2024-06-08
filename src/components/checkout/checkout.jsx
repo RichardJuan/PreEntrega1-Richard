@@ -5,6 +5,8 @@ import { CartContext } from "../../context/CartContext"
 import { addDoc, collection, doc, setDoc } from "firebase/firestore";
 import db from "../../db/db";
 import { Timestamp } from "firebase/firestore";
+import { toast, useToast } from "react-toastify";
+import validateForm from "../utils/validationYup";
 
 const Checkout = () => {
     const [datosForm, setDatosForm] = useState({
@@ -18,18 +20,6 @@ const Checkout = () => {
     const handleChangeInput = (event) => {
         setDatosForm({...datosForm, [event.target.name]: event.target.value})
     }
-    
-const handleSubmitForm = (event) => {
-    event.preventDefault()
-    const orden = {
-        comprador: { ...datosForm},
-        productos: [ ...carrito],
-        fecha: Timestamp.fromDate(new Date()),
-        total: precioTotal()
-    }
-    generarOrden(orden)
-    }
-
     const generarOrden = (orden) => {
         const ordenesRef = collection(db, "ordenes")
         addDoc(ordenesRef, orden)
@@ -40,15 +30,37 @@ const handleSubmitForm = (event) => {
                 vaciarCarrito()
             })
     }
+    
+const handleSubmitForm = async (event) => {
+    event.preventDefault()
+    const orden = {
+        comprador: { ...datosForm},
+        productos: [ ...carrito],
+        fecha: Timestamp.fromDate(new Date()),
+        total: precioTotal()
+    }
+    try{
+        const response = await validateForm(datosForm)
+        if (response.status === "success"){
+            generarOrden(orden)
+        }else{
+            toast.warning(response.message)
+        }
+    }catch (error){
+        toast.error("Error")
+    }
+    }
+
 
     const updateStock = () => {
         carrito.map((productoCarrito)=>{
             let quantity = productoCarrito.quantity
             delete productoCarrito.quantity
+
             const productoRef = doc(db, "productos", productoCarrito.id)
             setDoc(productoRef, {...productoCarrito, stock: productoCarrito.stock - quantity})
                 .then(() => console.log("stock actualizado"))
-                .catch((error) => console.log(error))
+                .catch((error) => toast.error("Error"))
         })
     }
 
